@@ -2,6 +2,13 @@
 
 const std::string Rectangle::shapeName = "Rectangle";
 
+Rectangle::Rectangle() {
+	this->a = -1;
+	this->b = -1;
+	perimeter = -1;
+	area = -1;
+}
+
 Rectangle::Rectangle(double a, double b) {
 	this->a = a;
 	this->b = b;

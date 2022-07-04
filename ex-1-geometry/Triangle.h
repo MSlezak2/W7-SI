@@ -1,17 +1,16 @@
 #pragma once
 #include "Shape.h"
-class Rectangle :
+class Triangle :
     public Shape {
 public:
-    Rectangle();
-    Rectangle(double a, double b);
+    Triangle(double a, double b, double c, double h);
     virtual std::string toString() override;
     virtual double calculatePerimeter() override;
     virtual double calculateArea() override;
 
 protected:
-    double a, b;
-    
+    double a, b, c, h;
+
 private:
     static const std::string shapeName;
 };
