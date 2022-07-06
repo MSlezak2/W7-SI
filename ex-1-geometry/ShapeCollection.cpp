@@ -7,7 +7,7 @@ void ShapeCollection::addShape(Shape& shape) {
 
 void ShapeCollection::getShapesTable() {
 	for (size_t i = 0; i < shapes.size(); i++) {
-		std::cout << shapes[i]->toString();
+		std::cout << shapes[i]->toString() << std::endl;
 	}
 }
 
