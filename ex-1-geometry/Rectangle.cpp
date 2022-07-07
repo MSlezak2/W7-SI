@@ -9,6 +9,11 @@ Rectangle::Rectangle() {
 	area = -1;
 }
 
+Rectangle::Rectangle(int maxValue) {
+	a = UI::readNumber(1, maxValue);
+	b = UI::readNumber(1, maxValue);
+}
+
 Rectangle::Rectangle(double a, double b) {
 	this->a = a;
 	this->b = b;

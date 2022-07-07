@@ -2,6 +2,14 @@
 
 const std::string Trapezium::shapeName = "Trapezium";
 
+Trapezium::Trapezium(int maxValue) {
+	a = UI::readNumber(1, maxValue);
+	b = UI::readNumber(1, maxValue);
+	c = UI::readNumber(1, maxValue);
+	d = UI::readNumber(1, maxValue);
+	h = UI::readNumber(1, maxValue);
+}
+
 Trapezium::Trapezium(double a, double b, double c, double d, double h) {
 	this->a = a;
 	this->b = b;

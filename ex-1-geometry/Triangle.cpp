@@ -2,6 +2,12 @@
 
 const std::string Triangle::shapeName = "Triangle";
 
+Triangle::Triangle(int maxValue) {
+	a = UI::readNumber(1, maxValue);
+	b = UI::readNumber(1, maxValue);
+	c = UI::readNumber(1, maxValue);
+}
+
 Triangle::Triangle(double a, double b, double c, double h) {
 	this->a = a;
 	this->b = b;

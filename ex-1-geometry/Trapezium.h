@@ -3,6 +3,7 @@
 class Trapezium :
     public Shape {
 public:
+    Trapezium(int maxValue);
     Trapezium(double a, double b, double c, double d, double h);
     virtual std::string toString() override;
     virtual double calculatePerimeter() override;

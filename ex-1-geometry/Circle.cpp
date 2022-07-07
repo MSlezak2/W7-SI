@@ -2,6 +2,10 @@
 
 const std::string Circle::shapeName = "Circle";
 
+Circle::Circle(int maxValue) {
+	r = UI::readNumber(1, maxValue);
+}
+
 Circle::Circle(double r) {
 	this->r = r;
 	perimeter = calculatePerimeter();

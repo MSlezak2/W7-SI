@@ -4,6 +4,7 @@ class Rectangle :
     public Shape {
 public:
     Rectangle();
+    Rectangle(int maxValue);
     Rectangle(double a, double b);
     virtual std::string toString() override;
     virtual double calculatePerimeter() override;

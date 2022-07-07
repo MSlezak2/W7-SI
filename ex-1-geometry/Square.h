@@ -3,6 +3,7 @@
 class Square :
     public Rectangle {
 public:
+    Square(int maxValue);
     Square(double a);
     virtual std::string toString() override;
 

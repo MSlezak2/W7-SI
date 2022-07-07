@@ -2,6 +2,10 @@
 
 const std::string Square::shapeName = "Square";
 
+Square::Square(int maxValue) {
+	a = UI::readNumber(1, maxValue);
+}
+
 Square::Square(double a) {
 	this->a = a;
 	this->b = a;

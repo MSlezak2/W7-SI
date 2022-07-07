@@ -1,12 +1,21 @@
 #include "UsersChoices.h"
+#include "UI.h"
 #include <string>
 
 UsersChoices::UsersChoices() {
 
 }
 
-UsersChoices::UsersChoices(std::map<int, std::string> choices) {
-	this->choices = choices;
+UsersChoices::UsersChoices(std::map<int, std::string> states) {
+	this->states = states;
+}
+
+void UsersChoices::setStates(std::map<int, std::string> newStates) {
+	states = newStates;
+}
+
+void UsersChoices::setOptions(std::vector<std::string> newOptions) {
+	options = newOptions;
 }
 
 int UsersChoices::chooseNewState() {
@@ -14,13 +23,13 @@ int UsersChoices::chooseNewState() {
 	int usersNumber;
 
 	// display options
-	displayChoices();
+	displayStates();
 
 	// read user's input
-	usersNumber = readNumber(1, choices.size());
+	usersNumber = UI::readNumber(1, states.size());
 
 	// set new state accordingly
-	std::map<int, std::string>::iterator it = choices.begin();
+	std::map<int, std::string>::iterator it = states.begin();
 	for (int i = 0; i < usersNumber - 1; i++) {
 		it++;
 	}
@@ -29,30 +38,25 @@ int UsersChoices::chooseNewState() {
 	return newState;
 }
 
-void UsersChoices::displayChoices() {
+int UsersChoices::chooseOption() {
+
+	displayOptions();
+
+	return UI::readNumber(1, options.size());;
+}
+
+void UsersChoices::displayStates() {
 	int optionNumber = 1;
 
-	for (const auto& choice : choices) {
+	for (const auto& choice : states) {
 		std::cout << optionNumber++ << ". " << choice.second << std::endl;
 	}
 }
 
-int UsersChoices::readNumber(int rangeStart, int rangeEnd) {
-	
-	int number = HUGE_VAL;
-	std::string userInput;
+void UsersChoices::displayOptions() {
 
-	while (number < rangeStart || number > rangeStart) {
-		std::cin >> userInput;
-		try {
-			number = stoi(userInput);
-			if (number < rangeStart || number > rangeStart) {
-				std::cout << "Look, you're allowed to choose only between those few options" << std::endl;
-			}
-		} catch (const std::exception&) {
-			std::cout << "It's not even a number!" << std::endl;
-		}
+	for (int i = 1; i <= options.size(); i++) {
+		std::cout << i << ". " << options[i - 1] << std::endl;
 	}
-	
-	return number;
 }
+
