@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "UsersChoices.h"
 
 class ShapeCollection;
 class Shape;
@@ -13,10 +12,10 @@ class Triangle;
 
 class UI {
 public:
-	void start(ShapeCollection shapeCollection);
 	static int readNumber(int rangeStart, int rangeEnd);
+	//void setUsersChoices();
 
 private:
-	UsersChoices usersChoices;
+	//UsersChoices usersChoices;
 };
 
