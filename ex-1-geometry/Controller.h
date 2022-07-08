@@ -1,6 +1,6 @@
 #pragma once
-#include "UI.h"
-#include "ShapeCollection.h"
+#include "ui/UI.h"
+#include "data/ShapeCollection.h"
 
 class Controller {
 
