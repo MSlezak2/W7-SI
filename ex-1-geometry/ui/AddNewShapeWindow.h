@@ -1,16 +1,19 @@
 #pragma once
 #include "Window.h"
 #include "Options.h"
+#include "../data/ShapeCollection.h"
 
-class AddNewWindow :
+class AddNewShapeWindow :
     public Window {
 public:
-    AddNewWindow();
+    AddNewShapeWindow(ShapeCollection* shapeCollection);
     // Inherited via Window
     virtual void doTheTask() override;
 
 private:
     Options options;
+    ShapeCollection* shapeCollection;
+
 
 };
 

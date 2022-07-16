@@ -1,12 +1,12 @@
 #include "UI.h"
 
-#include "ShapeCollection.h"
-#include "Shape.h"
-#include "Circle.h"
-#include "Rectangle.h"
-#include "Square.h"
-#include "Trapezium.h"
-#include "Triangle.h"
+#include "../data/ShapeCollection.h"
+#include "../data/Shape.h"
+#include "../data/Circle.h"
+#include "../data/Rectangle.h"
+#include "../data/Square.h"
+#include "../data/Trapezium.h"
+#include "../data/Triangle.h"
 
 #include <iostream>
 #include <map>

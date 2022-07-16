@@ -1,8 +1,10 @@
 #include "Square.h"
+#include <iostream>
 
 const std::string Square::shapeName = "Square";
 
 Square::Square(int maxValue) {
+	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
 }
 

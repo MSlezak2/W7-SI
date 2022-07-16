@@ -1,8 +1,10 @@
 #include "Circle.h"
+#include <iostream>
 
 const std::string Circle::shapeName = "Circle";
 
 Circle::Circle(int maxValue) {
+	std::cout << "r:\t";
 	r = UI::readNumber(1, maxValue);
 }
 

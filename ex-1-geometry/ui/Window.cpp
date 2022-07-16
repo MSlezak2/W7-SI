@@ -1,8 +1,10 @@
 #include "Window.h"
 
 int Window::displayWindow() {
-	//
+	
 	int nextState;
+
+	system("cls");
 
 	displayTitle();
 	displayDescription();

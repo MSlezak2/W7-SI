@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+#include <iostream>
 
 const std::string Rectangle::shapeName = "Rectangle";
 
@@ -10,7 +11,9 @@ Rectangle::Rectangle() {
 }
 
 Rectangle::Rectangle(int maxValue) {
+	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
+	std::cout << "b:\t";
 	b = UI::readNumber(1, maxValue);
 }
 

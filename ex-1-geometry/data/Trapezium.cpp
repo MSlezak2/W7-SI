@@ -1,12 +1,18 @@
 #include "Trapezium.h"
+#include <iostream>
 
 const std::string Trapezium::shapeName = "Trapezium";
 
 Trapezium::Trapezium(int maxValue) {
+	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
+	std::cout << "b:\t";
 	b = UI::readNumber(1, maxValue);
+	std::cout << "c:\t";
 	c = UI::readNumber(1, maxValue);
+	std::cout << "d:\t";
 	d = UI::readNumber(1, maxValue);
+	std::cout << "h:\t";
 	h = UI::readNumber(1, maxValue);
 }
 
