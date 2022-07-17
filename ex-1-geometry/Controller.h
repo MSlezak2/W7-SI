@@ -4,6 +4,7 @@
 #include "ui/Window.h"
 #include "ui/MenuWindow.h"
 #include "ui/AddNewShapeWindow.h"
+#include "ui/ShowAllShapesWindow.h"
 
 class Controller {
 

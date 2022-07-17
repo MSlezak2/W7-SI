@@ -16,6 +16,11 @@ void Controller::start() {
 			window = new AddNewShapeWindow(&shapeCollection);
 			break;
 		}
+		case 2:
+		{
+			window = new ShowAllShapesWindow(&shapeCollection);
+			break;
+		}
 		}
 		state = window->displayWindow();
 		delete window; // to avoid memory leak

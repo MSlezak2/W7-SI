@@ -14,6 +14,8 @@ Trapezium::Trapezium(int maxValue) {
 	d = UI::readNumber(1, maxValue);
 	std::cout << "h:\t";
 	h = UI::readNumber(1, maxValue);
+	perimeter = calculatePerimeter();
+	area = calculateArea();
 }
 
 Trapezium::Trapezium(double a, double b, double c, double d, double h) {

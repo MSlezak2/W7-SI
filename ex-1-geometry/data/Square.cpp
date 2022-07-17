@@ -6,6 +6,8 @@ const std::string Square::shapeName = "Square";
 Square::Square(int maxValue) {
 	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
+	perimeter = calculatePerimeter();
+	area = calculateArea();
 }
 
 Square::Square(double a) {

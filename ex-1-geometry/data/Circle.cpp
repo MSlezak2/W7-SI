@@ -6,6 +6,8 @@ const std::string Circle::shapeName = "Circle";
 Circle::Circle(int maxValue) {
 	std::cout << "r:\t";
 	r = UI::readNumber(1, maxValue);
+	perimeter = calculatePerimeter();
+	area = calculateArea();
 }
 
 Circle::Circle(double r) {

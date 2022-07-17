@@ -1,11 +1,19 @@
 #include "Triangle.h"
+#include <iostream>
 
 const std::string Triangle::shapeName = "Triangle";
 
 Triangle::Triangle(int maxValue) {
+	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
+	std::cout << "b:\t";
 	b = UI::readNumber(1, maxValue);
+	std::cout << "c:\t";
 	c = UI::readNumber(1, maxValue);
+	std::cout << "h:\t";
+	h = UI::readNumber(1, maxValue);
+	perimeter = calculatePerimeter();
+	area = calculateArea();
 }
 
 Triangle::Triangle(double a, double b, double c, double h) {

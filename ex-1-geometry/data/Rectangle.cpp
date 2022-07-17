@@ -15,6 +15,8 @@ Rectangle::Rectangle(int maxValue) {
 	a = UI::readNumber(1, maxValue);
 	std::cout << "b:\t";
 	b = UI::readNumber(1, maxValue);
+	perimeter = calculatePerimeter();
+	area = calculateArea();
 }
 
 Rectangle::Rectangle(double a, double b) {
