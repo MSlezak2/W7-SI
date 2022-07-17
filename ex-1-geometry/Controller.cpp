@@ -21,6 +21,16 @@ void Controller::start() {
 			window = new ShowAllShapesWindow(&shapeCollection);
 			break;
 		}
+		case 3:
+		{
+			window = new ShowLargestPerimeterWindow(&shapeCollection);
+			break;
+		}
+		case 4:
+		{
+			window = new ShowLargestAreaWindow(&shapeCollection);
+			break;
+		}
 		}
 		state = window->displayWindow();
 		delete window; // to avoid memory leak

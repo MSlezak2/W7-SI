@@ -5,6 +5,8 @@
 #include "ui/MenuWindow.h"
 #include "ui/AddNewShapeWindow.h"
 #include "ui/ShowAllShapesWindow.h"
+#include "ui/ShowLargestPerimeterWindow.h"
+#include "ui/ShowLargestAreaWindow.h"
 
 class Controller {
 
