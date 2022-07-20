@@ -1,13 +1,15 @@
 #include "Rectangle.h"
 #include <iostream>
 
-const std::string Rectangle::shapeName = "Rectangle";
 
 Rectangle::Rectangle() {
 	this->a = -1;
 	this->b = -1;
 	perimeter = -1;
 	area = -1;
+	shapeName = "Rectangle";
+	areaFormula = "a×b";
+	perimeterFormula = "2×a+2×b";
 }
 
 Rectangle::Rectangle(int maxValue) {
@@ -17,6 +19,10 @@ Rectangle::Rectangle(int maxValue) {
 	b = UI::readNumber(1, maxValue);
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Rectangle";
+	areaFormula = "a×b";
+	perimeterFormula = "2×a+2×b";
+
 }
 
 Rectangle::Rectangle(double a, double b) {

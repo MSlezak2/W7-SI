@@ -31,6 +31,11 @@ void Controller::start() {
 			window = new ShowLargestAreaWindow(&shapeCollection);
 			break;
 		}
+		case 5:
+		{
+			window = new ShowFormulasWindow();
+			break;
+		}
 		}
 		state = window->displayWindow();
 		delete window; // to avoid memory leak

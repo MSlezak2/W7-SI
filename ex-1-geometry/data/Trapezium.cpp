@@ -1,7 +1,11 @@
 #include "Trapezium.h"
 #include <iostream>
 
-const std::string Trapezium::shapeName = "Trapezium";
+Trapezium::Trapezium() {
+	shapeName = "Trapezium";
+	areaFormula = "((a+b)×h/2)";
+	perimeterFormula = "a+b+c+d";
+}
 
 Trapezium::Trapezium(int maxValue) {
 	std::cout << "a:\t";
@@ -16,6 +20,9 @@ Trapezium::Trapezium(int maxValue) {
 	h = UI::readNumber(1, maxValue);
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Trapezium";
+	areaFormula = "((a+b)×h/2)";
+	perimeterFormula = "a+b+c+d";
 }
 
 Trapezium::Trapezium(double a, double b, double c, double d, double h) {
@@ -26,6 +33,9 @@ Trapezium::Trapezium(double a, double b, double c, double d, double h) {
 	this->h = h;
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Trapezium";
+	areaFormula = "((a+b)×h/2)";
+	perimeterFormula = "a+b+c+d";
 }
 
 double Trapezium::calculatePerimeter() {

@@ -7,6 +7,8 @@
 #include "ui/ShowAllShapesWindow.h"
 #include "ui/ShowLargestPerimeterWindow.h"
 #include "ui/ShowLargestAreaWindow.h"
+#include "ui/ShowFormulasWindow.h"
+
 
 class Controller {
 

@@ -4,6 +4,7 @@
 class Circle :
     public Shape {
 public:
+    Circle();
     Circle(int maxValue);
     Circle(double r);
     virtual std::string toString() override;
@@ -12,8 +13,5 @@ public:
 
 protected:
     double r;
-
-private:
-    static const std::string shapeName;
 };
 

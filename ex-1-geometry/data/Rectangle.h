@@ -12,8 +12,5 @@ public:
 
 protected:
     double a, b;
-    
-private:
-    static const std::string shapeName;
 };
 

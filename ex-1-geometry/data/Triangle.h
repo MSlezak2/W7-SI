@@ -3,6 +3,7 @@
 class Triangle :
     public Shape {
 public:
+    Triangle();
     Triangle(int maxValue);
     Triangle(double a, double b, double c, double h);
     virtual std::string toString() override;
@@ -11,8 +12,5 @@ public:
 
 protected:
     double a, b, c, h;
-
-private:
-    static const std::string shapeName;
 };
 

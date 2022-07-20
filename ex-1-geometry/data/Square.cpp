@@ -1,13 +1,20 @@
 #include "Square.h"
 #include <iostream>
 
-const std::string Square::shapeName = "Square";
+Square::Square() {
+	shapeName = "Square";
+	areaFormula = "a×a";
+	perimeterFormula = "4×a";
+}
 
 Square::Square(int maxValue) {
 	std::cout << "a:\t";
 	a = UI::readNumber(1, maxValue);
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Square";
+	areaFormula = "a×a";
+	perimeterFormula = "4×a";
 }
 
 Square::Square(double a) {
@@ -15,6 +22,9 @@ Square::Square(double a) {
 	this->b = a;
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Square";
+	areaFormula = "a×a";
+	perimeterFormula = "4×a";
 }
 
 std::string Square::toString() {

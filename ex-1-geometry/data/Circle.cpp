@@ -1,19 +1,30 @@
-#include "Circle.h"
+﻿#include "Circle.h"
 #include <iostream>
 
-const std::string Circle::shapeName = "Circle";
+
+Circle::Circle() {
+	shapeName = "Circle";
+	areaFormula = "π×r×r";
+	perimeterFormula = "2×π×r";
+}
 
 Circle::Circle(int maxValue) {
 	std::cout << "r:\t";
 	r = UI::readNumber(1, maxValue);
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Circle";
+	areaFormula = "π×r×r";
+	perimeterFormula = "2×π×r";
 }
 
 Circle::Circle(double r) {
 	this->r = r;
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Circle";
+	areaFormula = "π×r×r";
+	perimeterFormula = "2×π×r";
 }
 
 double Circle::calculatePerimeter() {

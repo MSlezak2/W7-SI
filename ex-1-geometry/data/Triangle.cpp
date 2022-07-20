@@ -1,7 +1,11 @@
 #include "Triangle.h"
 #include <iostream>
 
-const std::string Triangle::shapeName = "Triangle";
+Triangle::Triangle() {
+	shapeName = "Triangle";
+	areaFormula = "a×h/2";
+	perimeterFormula = "a+b+c";
+}
 
 Triangle::Triangle(int maxValue) {
 	std::cout << "a:\t";
@@ -14,6 +18,9 @@ Triangle::Triangle(int maxValue) {
 	h = UI::readNumber(1, maxValue);
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Triangle";
+	areaFormula = "a×h/2";
+	perimeterFormula = "a+b+c";
 }
 
 Triangle::Triangle(double a, double b, double c, double h) {
@@ -23,6 +30,9 @@ Triangle::Triangle(double a, double b, double c, double h) {
 	this->h = h;
 	perimeter = calculatePerimeter();
 	area = calculateArea();
+	shapeName = "Triangle";
+	areaFormula = "a×h/2";
+	perimeterFormula = "a+b+c";
 }
 
 double Triangle::calculatePerimeter() {

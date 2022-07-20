@@ -3,6 +3,7 @@
 class Trapezium :
     public Shape {
 public:
+    Trapezium();
     Trapezium(int maxValue);
     Trapezium(double a, double b, double c, double d, double h);
     virtual std::string toString() override;
@@ -11,8 +12,5 @@ public:
 
 protected:
     double a, b, c, d, h;
-
-private:
-    static const std::string shapeName;
 };
 
